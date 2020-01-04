@@ -59,9 +59,6 @@ void setup() {
 void loop() {
 
 
-  if(c>9){  
-
-    double avg_weight = sum_weight / 10;
     if(scale_val < 0.9){
       scale_val = 0;
     }
@@ -71,12 +68,7 @@ void loop() {
     display.println(avg_weight, 1);
     display.display();
 
-    sum_weight = 0;
-    c = 0;
 
-  }
-
-  c++;
 
 String floatAlignRight ( float num )
 {
