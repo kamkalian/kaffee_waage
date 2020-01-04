@@ -55,15 +55,9 @@ void setup() {
   
 }
 
-double sum_weight;
-int c;
 
 void loop() {
-  long scale_val = scale.read();
-  //Serial.println(scale_val);
-  double weight_val = mapfloat(scale_val, start_val+(tara_val-start_val), val_140+(tara_val-start_val), 0, 140);
 
-  sum_weight += weight_val;cd DDDd
 
   if(c>9){  
 
