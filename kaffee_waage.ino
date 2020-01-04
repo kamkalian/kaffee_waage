@@ -81,4 +81,21 @@ void loop() {
 
   c++;
 
+String floatAlignRight ( float num )
+{
+  int    space  = 0;
+  String spaces = "";
+ 
+  //how large is this number?
+  //always assumes value has 2 digits after the decimal point.
+  if ( num < 10.0 ) space = 5; //10.0=4chars. 12+4=16, etc
+  else if ( num > 9.0 && 100.0 > num ) space = 4;
+  else if ( num > 99.0 && 1000.0 > num ) space = 3;
+  else if ( num > 999.00 ) space = 2;
+ 
+  //add the correct amount of spaces infront of our value
+  for ( uint8_t s=0; s<space; s++ ) spaces += F(" ");
+ 
+  //return value (or your code here)
+  return spaces + String ( num );
 }
