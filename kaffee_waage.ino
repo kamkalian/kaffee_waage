@@ -11,19 +11,6 @@ HX711 scale;
 // Declaration for an SSD1306 display connected to I2C (SDA, SCL pins)
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire);
 
-long start_val;
-long tara_val;
-long val_500 = 8379053;
-long val_140 = -162080;
-
-
-
-
-float mapfloat(long x, long in_min, long in_max, long out_min, long out_max)
-{
- return (float)(x - in_min) * (out_max - out_min) / (float)(in_max - in_min) + out_min;
-}
-
 
 void setup() {
   //Serial.begin(9600);
