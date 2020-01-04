@@ -66,9 +66,10 @@ void loop() {
 
     display.clearDisplay();
     display.setCursor(0, 0);
-    display.println(avg_weight, 1);
+    display.println(floatAlignRight(scale_val));
     display.display();
 
+}
 
 
 String floatAlignRight ( float num )
