@@ -68,6 +68,9 @@ void loop() {
   if(c>9){  
 
     double avg_weight = sum_weight / 10;
+    if(scale_val < 0.9){
+      scale_val = 0;
+    }
 
     display.clearDisplay();
     display.setCursor(0, 0);
