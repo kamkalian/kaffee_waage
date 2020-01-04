@@ -25,8 +25,33 @@ void setup() {
   display.setTextSize(2);
   display.setTextColor(SSD1306_WHITE);
 
-  start_val = scale.read();
-  tara_val = scale.read();
+  /* ----------------------
+   *  Kalibrierung starten
+     ----------------------*/
+  display.clearDisplay();
+  display.setCursor(0, 0);
+  display.println("Kalibrierung...");
+  display.display();
+  
+  scale.set_scale();
+  scale.tare();
+
+  display.clearDisplay();
+  display.setCursor(0, 0);
+  display.println("Gewicht!");
+  display.display();
+
+  delay(3000);
+  
+  long cal_val = scale.get_units(50) / 140;
+
+  scale.set_scale(cal_val);
+
+  display.clearDisplay();
+  display.setCursor(0, 0);
+  display.println("Fertig!");
+  display.display();
+  delay(1000);
   
 }
 
