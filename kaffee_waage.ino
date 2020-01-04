@@ -58,6 +58,7 @@ void setup() {
 
 void loop() {
 
+    float scale_val = scale.get_units(10);
 
     if(scale_val < 0.9){
       scale_val = 0;
