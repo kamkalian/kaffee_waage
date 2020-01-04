@@ -1,10 +1,8 @@
-//#include <Q2HX711.h>
 #include <HX711.h>
 #include <SPI.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
 
-//Q2HX711 hx711(2, 3);
 HX711 scale;
 
 #define SCREEN_WIDTH 128 // OLED display width, in pixels
