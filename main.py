@@ -13,6 +13,10 @@ i2c = machine.I2C(scl=machine.Pin(25), sda=machine.Pin(26))
 oled = ssd1306.SSD1306_I2C(128, 32, i2c, 0x3c)
 oled.fill(0)
 
+# Pin für Tara Taste einrichten
+tara_pin = Pin(12, Pin.IN, Pin.PULL_UP)
+
+
 # Bootscreen anzeigen
 oled.text("Kaffee Waage", 20, 10)
 oled.show()
