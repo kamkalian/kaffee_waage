@@ -37,6 +37,8 @@ while True:
             oled.show()
         else:
         weight = 0.0
+    
+    if weight >= 0:
     oled.fill(0)
     oled.text(str(weight)+'g', 0, 10)
     oled.show()
