@@ -1,6 +1,7 @@
 import machine, ssd1306, time
 from hx711 import HX711
 from scales import Scales
+from machine import Pin
 
 
 # Kalibrierungswert
@@ -36,10 +37,19 @@ while True:
             oled.text('negative value!', 0, 20)
             oled.show()
         else:
-        weight = 0.0
+            weight = 0.0
     
     if weight >= 0:
-    oled.fill(0)
-    oled.text(str(weight)+'g', 0, 10)
-    oled.show()
+        oled.fill(0)
+        oled.text(str(weight)+'g', 0, 10)
+        oled.show()
+
+    # Tara Taste ablesen und gegebenfalls scl über die tara() Funktion zurücksetzen.
+    if tara_pin.value() == 0: # Tara Taste wurde ausgelöst
+        oled.fill(0)
+        oled.text('Tara...', 0, 20)
+        oled.show()
+        scl.tare()
+
+
 
