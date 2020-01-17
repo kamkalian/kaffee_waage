@@ -18,7 +18,7 @@ tara_pin = Pin(12, Pin.IN, Pin.PULL_UP)
 
 
 # Bootscreen anzeigen
-oled.text("Kaffee Waage", 20, 10)
+oled.text("Kaffee Waage", 10, 5)
 oled.show()
 time.sleep(1)
 
