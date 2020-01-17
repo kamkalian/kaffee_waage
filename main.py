@@ -31,6 +31,11 @@ while True:
     val = scl.stable_value(5,0)
     weight = round(140 * val / cal_140, 1)
     if weight < 0.5:
+        if weight < -0.5:
+            oled.fill(0)
+            oled.text('negative value!', 0, 20)
+            oled.show()
+        else:
         weight = 0.0
     oled.fill(0)
     oled.text(str(weight)+'g', 0, 10)
