@@ -28,7 +28,7 @@ scl = Scales(d_out=4, pd_sck=5)
 # 
 scl.tare()
 while True:
-    val = scl.stable_value(10,0)
+    val = scl.stable_value(5,0)
     weight = round(140 * val / cal_140, 1)
     if weight < 0.5:
         weight = 0.0
