@@ -7,8 +7,4 @@ ESP32 mit Micropython für eine Kaffee Waage mit HX711 + Wägezelle + TFT(ST7735
 
 
 
-![Image2](https://github.com/kamkalian/kaffee_waage/blob/master/img2.JPG)
-
-
-
 ![Image3](https://github.com/kamkalian/kaffee_waage/blob/master/img3.JPG)
